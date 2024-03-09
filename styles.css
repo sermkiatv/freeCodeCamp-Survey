@@ -5,4 +5,7 @@ body {
   rgba(136, 136, 206, 0.7)
   ),
   url(./img/survey-form-background.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
