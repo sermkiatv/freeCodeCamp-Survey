@@ -6,6 +6,6 @@ body {
   ),
   url(./img/survey-form-background.jpeg);
   background-size: cover;
-  background-position: center;
+  background-position: top left;
   background-repeat: no-repeat;
 }
