@@ -5,8 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>freeCodeCamp Survery Form</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="container">
-  
+  <h1 id="title">freeCodeCamp Survey Form</h1>
+  <p id="description" class="poppins-extralight-italic">Thank you for taking the time to help us improve the platform</p>
+  <form id="survery-form" method="post" action='/submit_form/'>
+    <fieldset>
+      <label id="name-label" for="name">Name <input id="name" type="text" placeholder="Enter your name" /></label>
+      <label id="email-label" for="email">Email <input id="email" type="email" placeholder="Enter your Email"/></label>
+      <label id="number-label" for="age">Age (Optional) <input id="age" type="number" min="18" max="120" placeholder="Age" /></label>
+      <label for="referrer">How did you hear about us?
+        <select id="dropdown" name="dropdown">
+          <option value="" disabled selected style="display:none">Select current role</option>
+          <option value="1">Student</option>
+          <option value="2">Full Time Job</option>
+          <option value="3">Full Time Learner</option>
+          <option value="4">Prefer not to say</option>
+          <option value="5">Other</option>
+        </select>
+      </label>
+      <label>Which option best describe your current role?</label>
+      <label for="definitely" class="radio-label" ><input id="definitely" type="radio" name="recommend" checked /> Definitely</label>
+      <label for="maybe" class="radio-label" ><input id="maybe" type="radio" name="recommend" /> Maybe</label>
+      <label for="notsure" class="radio-label" ><input id="notsure" type="radio" name="recommend" /> Not sure</label>
+    </fieldset>
+    <fieldset>
+      <label for="favorite-feature">What is your favorite feature of freeCodeCamp?
+        <select id="favorite-feature" name="favorite-feature">
+          <option value="" disabled selected style="display:none">Select an option</option>
+          <option value="1">Challenges</option>
+          <option value="2">Projects</option>
+          <option value="3">Community</option>
+          <option value="4">Open Source</option>
+        </select>
+      </label>
+      <label>What would you like to see improved? (check all that apply)</label>
+      <label for="front-end" class="radio-label" ><input id="front-end" type="checkbox" name="improvement" /> Front-end Projects</label>
+      <label for="back-end" class="radio-label" ><input id="back-end" type="checkbox" name="improvement" /> Back-end Projects</label>
+      <label for="data-visualization" class="radio-label" ><input id="data-visualization" type="checkbox" name="recommend" /> Data Visualization</label>
+      <label for="challenges" class="radio-label" ><input id="challenges" type="checkbox" name="recommend" /> Challenges</label>
+      <label for="opensource-community" class="radio-label" ><input id="opensource-community" type="checkbox" name="recommend" /> Open Source Community</label>
+      <label for="gitter-help" class="radio-label" ><input id="gitter-help" type="checkbox" name="recommend" /> Gitter Help Room</label>
+      <label for="videos" class="radio-label" ><input id="videos" type="checkbox" name="recommend" /> Videos</label>
+      <label for="city-meetups" class="radio-label" ><input id="city-meetups" type="checkbox" name="recommend" /> City Meetups</label>
+      <label for="wiki" class="radio-label" ><input id="wiki" type="checkbox" name="recommend" /> Wiki</label>
+      <label for="forum" class="radio-label" ><input id="forum" type="checkbox" name="recommend" /> Forum</label>
+      <label for="additional-courses" class="radio-label" ><input id="additional-courses" type="checkbox" name="recommend" />Additional Courses</label>
+    </fieldset>
+    <fieldset></fieldset>
+  </form>
 </body>
 </html>
