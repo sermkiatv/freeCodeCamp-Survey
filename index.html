@@ -12,11 +12,11 @@
 <body class="container">
   <h1 id="title">freeCodeCamp Survey Form</h1>
   <p id="description" class="poppins-extralight-italic">Thank you for taking the time to help us improve the platform</p>
-  <form id="survery-form" method="post" action='/submit_form/'>
+  <form id="survey-form" method="post" action='/submit_form/'>
     <fieldset>
-      <label id="name-label" for="name">Name <input id="name" type="text" placeholder="Enter your name" /></label>
-      <label id="email-label" for="email">Email <input id="email" type="email" placeholder="Enter your Email"/></label>
-      <label id="number-label" for="age">Age (Optional) <input id="age" type="number" min="18" max="120" placeholder="Age" /></label>
+      <label id="name-label" for="name"  >Name <input id="name" type="text" placeholder="Enter your name" required /></label>
+      <label id="email-label" for="email" >Email <input id="email" type="email" placeholder="Enter your Email" required/></label>
+      <label id="number-label" for="age">Age (Optional) <input id="number" type="number" min="18" max="120" placeholder="18" /></label>
       <label for="referrer">How did you hear about us?
         <select id="dropdown" name="dropdown">
           <option value="" disabled selected style="display:none">Select current role</option>
@@ -28,9 +28,9 @@
         </select>
       </label>
       <label>Which option best describe your current role?</label>
-      <label for="definitely" class="radio-label" ><input id="definitely" type="radio" name="recommend" checked /> Definitely</label>
-      <label for="maybe" class="radio-label" ><input id="maybe" type="radio" name="recommend" /> Maybe</label>
-      <label for="notsure" class="radio-label" ><input id="notsure" type="radio" name="recommend" /> Not sure</label>
+      <label for="definitely" class="radio-label" ><input id="definitely" type="radio" name="recommend" value="definitely" /> Definitely</label>
+      <label for="maybe" class="radio-label" ><input id="maybe" type="radio" name="recommend" value="maybe"/> Maybe</label>
+      <label for="notsure" class="radio-label" ><input id="notsure" type="radio" name="recommend" value="notsure"/> Not sure</label>
     </fieldset>
     <fieldset>
       <label for="favorite-feature">What is your favorite feature of freeCodeCamp?
@@ -43,19 +43,22 @@
         </select>
       </label>
       <label>What would you like to see improved? (check all that apply)</label>
-      <label for="front-end" class="radio-label" ><input id="front-end" type="checkbox" name="improvement" /> Front-end Projects</label>
-      <label for="back-end" class="radio-label" ><input id="back-end" type="checkbox" name="improvement" /> Back-end Projects</label>
-      <label for="data-visualization" class="radio-label" ><input id="data-visualization" type="checkbox" name="recommend" /> Data Visualization</label>
-      <label for="challenges" class="radio-label" ><input id="challenges" type="checkbox" name="recommend" /> Challenges</label>
-      <label for="opensource-community" class="radio-label" ><input id="opensource-community" type="checkbox" name="recommend" /> Open Source Community</label>
-      <label for="gitter-help" class="radio-label" ><input id="gitter-help" type="checkbox" name="recommend" /> Gitter Help Room</label>
-      <label for="videos" class="radio-label" ><input id="videos" type="checkbox" name="recommend" /> Videos</label>
-      <label for="city-meetups" class="radio-label" ><input id="city-meetups" type="checkbox" name="recommend" /> City Meetups</label>
-      <label for="wiki" class="radio-label" ><input id="wiki" type="checkbox" name="recommend" /> Wiki</label>
-      <label for="forum" class="radio-label" ><input id="forum" type="checkbox" name="recommend" /> Forum</label>
-      <label for="additional-courses" class="radio-label" ><input id="additional-courses" type="checkbox" name="recommend" />Additional Courses</label>
+      <label for="front-end" class="radio-label" ><input id="front-end" type="checkbox" name="improvement" value="front-end"/> Front-end Projects</label>
+      <label for="back-end" class="radio-label" ><input id="back-end" type="checkbox" name="improvement" value="back-end" /> Back-end Projects</label>
+      <label for="data-visualization" class="radio-label" ><input id="data-visualization" type="checkbox" name="recommend" value="data-visualization" /> Data Visualization</label>
+      <label for="challenges" class="radio-label" ><input id="challenges" type="checkbox" name="recommend" value="challenges"/> Challenges</label>
+      <label for="opensource-community" class="radio-label" ><input id="opensource-community" type="checkbox" name="recommend" value="opensource-community" /> Open Source Community</label>
+      <label for="gitter-help" class="radio-label" ><input id="gitter-help" type="checkbox" name="recommend" value="gitter-help"/> Gitter Help Room</label>
+      <label for="videos" class="radio-label" ><input id="videos" type="checkbox" name="recommend" value="video" /> Videos</label>
+      <label for="city-meetups" class="radio-label" ><input id="city-meetups" type="checkbox" name="recommend" value="city-meetups"/> City Meetups</label>
+      <label for="wiki" class="radio-label" ><input id="wiki" type="checkbox" name="recommend" value="wiki"/> Wiki</label>
+      <label for="forum" class="radio-label" ><input id="forum" type="checkbox" name="recommend" value="forum"/> Forum</label>
+      <label for="additional-courses" class="radio-label" ><input id="additional-courses" type="checkbox" name="recommend" value="additional-courses"/>Additional Courses</label>
     </fieldset>
-    <fieldset></fieldset>
+    <fieldset>
+      <label>Any comments or suggestions?<textarea id="suggestions" name="suggestions" rows="3" cols="30" placeholder="Enter your comment here..."></textarea> </label>
+    </fieldset>
+    <input id="submit" type="submit" value="Submit" />
   </form>
 </body>
 </html>
